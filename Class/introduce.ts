@@ -12,5 +12,5 @@ class Info {
   }
 }
 
-const me: Info = new Info("김영은", 18);
+const me: Info = new Info("김영은", 17);
 console.log(me.introduce());

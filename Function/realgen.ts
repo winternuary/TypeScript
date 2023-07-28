@@ -1,9 +1,31 @@
-//generic 사용
-function Arr<T>(a: T[]) {
-  return a[0];
-}
+//generic으로 선수만들기
+type Player<P> = {
+  name: string;
+  extraInfo: P;
+};
 
-const a = Arr<number>([1, 2, 3, 4]); //직접 적어줄 수도 있음(선택)
-const b = Arr([true, false, true]);
-const c = Arr(["a", "b", "c"]);
-const d = Arr([1, true, "하"]);
+//방법 1
+const Youngeun: Player<{ favFood: string }> = {
+  name: "Youngeun",
+  extraInfo: {
+    favFood: "bulldak",
+  },
+};
+
+//방법 2
+type MinjiExtra = {
+  Mbti: string;
+};
+type MinjiPlayer = Player<MinjiExtra>;
+const Minji: MinjiPlayer = {
+  name: "Minji",
+  extraInfo: {
+    Mbti: "istp",
+  },
+};
+
+//방법 3
+const ha: Player<null> = {
+  name: "ha",
+  extraInfo: null,
+};

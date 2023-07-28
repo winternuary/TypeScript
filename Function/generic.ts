@@ -25,3 +25,12 @@ superPrint2([1, 2, 3, 4]);
 superPrint2([true, false, true]);
 superPrint2(["a", "b", "c"]);
 superPrint2([1, 2, true, false]);
+
+//제네릭 추가하기
+type SuperPrint3 = <T, M>(a: T[], b: M) => T;
+const superPrint3: SuperPrint3 = (a) => a[0];
+
+superPrint3([1, 2, 3, 4], "x");
+superPrint3([true, false, true], 1);
+superPrint3(["a", "b", "c"], true);
+superPrint3([1, 2, true, false], ["어쩔", 3, false]);

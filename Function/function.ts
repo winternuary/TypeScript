@@ -25,5 +25,7 @@ type Add4 = {
 };
 
 const add4: Add4 = (a, b, c?: number) => {
+  if (c) return a + b + c;
   return a + b;
-}; //c는 아마도 number일 것이다 라는 의미
+}; //c는 아마도 number일 것이다 라는 의미(선택사항, 옵션)
+//c가 적용 되었을 때의 상황도 만들어 주기

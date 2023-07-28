@@ -16,4 +16,4 @@ type Add3 = {
   (a: number, b: string): number;
 };
 
-const add3: Add3 = (a, b) => a + b;
+const add3: Add3 = (a, b) => a + b; // b가 number 일수도 string 일수도 있기때문에 if로 걸러주어야함

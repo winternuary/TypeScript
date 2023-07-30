@@ -3,6 +3,6 @@
   "compilerOptions": {
     "outDir": "build",
     "target": "ES6",
-    "lib": ["ES6", "DOm"]
+    "lib": ["ES6", "DOm"] //사용할 라이브러리,API
   }
 }

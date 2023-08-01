@@ -3,8 +3,9 @@
   "compilerOptions": {
     "outDir": "build",
     "target": "ES6",
-    "lib": ["ES6", "DOm"], //사용할 라이브러리,API
+    "lib": ["ES6"], //사용할 라이브러리,API
     "strict": true,
-    "allowJs": true
+    "esModuleInterop": true,
+    "module": "CommonJS"
   }
 }

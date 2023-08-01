@@ -39,7 +39,7 @@ class Blockchain {
     this.blocks.push(newBlock);
   }
   public getBlocks() {
-    return this.blocks;
+    return [...this.blocks];
   }
 }
 
@@ -49,4 +49,5 @@ blockchain.addBlock("First one");
 blockchain.addBlock("Second one");
 blockchain.addBlock("Third one");
 
+blockchain.getBlocks().push(new Block("xxxxxx", 111111, "HACKEDDDDDDDD"));
 console.log(blockchain.getBlocks());

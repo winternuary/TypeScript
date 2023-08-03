@@ -1,4 +1,4 @@
-type Add = (a: number, b: number) => number; //call signatur
+type Add = (a: number, b: number) => number; //call signature
 
 //->
 type Add2 = {

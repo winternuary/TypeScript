@@ -14,6 +14,6 @@ let 회원들: (number | string)[] = [1, "2", 3];
 let 오브젝트: { a: string | number } = { a: "123" };
 
 let user: string = "kim";
-let age: unknown = undefined;
+let age: undefined | number = undefined;
 let married: boolean = false;
-let 철수 = [user, age, married]
+let 철수: (string | number | undefined | boolean)[] = [user, age, married];

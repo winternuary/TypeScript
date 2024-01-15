@@ -10,5 +10,5 @@ let project: { member: string[]; days: number; started: boolean } = {
   started: true,
 };
 
-let 회원들: number[] | string[] = [1, "2", 3];
-let 오브젝트: { a: string | number } = {a:'123'};
+let 회원들: (number | string)[] = [1, "2", 3];
+let 오브젝트: { a: string | number } = { a: "123" };

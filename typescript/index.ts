@@ -17,3 +17,17 @@ let user: string = "kim";
 let age: undefined | number = undefined;
 let married: boolean = false;
 let 철수: (string | number | undefined | boolean)[] = [user, age, married];
+
+let 학교: { score: number[]; teacher: string; friend: string } = {
+  score: [100, 97, 84],
+  teacher: "Phil",
+  friend: "John",
+};
+
+function 입력(x?: string) {
+  if (x) {
+    console.log("안녕" + x);
+  } else {
+    console.log("입력 없음");
+  }
+}

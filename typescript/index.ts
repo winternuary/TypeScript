@@ -1,6 +1,6 @@
 let 이름: string = "kim";
 let 나이: number = 18;
-let 출생지역: string = "부산";
+let 출생지역: string = "부산광역시";
 
 let obj: { singer: string; song: string } = { singer: "태연", song: "to X" };
 

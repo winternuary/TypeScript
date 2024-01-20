@@ -8,7 +8,7 @@ let obj: { singer: string; song: string } = { singer: "태연", song: "to X" };
 let project: { member: string[]; days: number; started: boolean } = {
   member: ["kim", "park"],
   days: 30,
-  started: true,
+  started: false,
 };
 
 let 회원들: (number | string)[] = [1, "2", 3];

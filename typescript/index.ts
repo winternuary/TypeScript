@@ -3,6 +3,7 @@ let 나이: number = 18;
 let 출생지역: string = "부산광역시";
 let 생일: string = "0113";
 
+
 let obj: { singer: string; song: string } = { singer: "태연", song: "to X" };
 
 let project: { member: string[]; days: number; started: boolean } = {
@@ -32,3 +33,19 @@ function 입력(x?: string) {
     console.log("입력 없음");
   }
 }
+
+function clean(a : (number|string)[]){
+  let cleaning: number[] = [];
+
+  a.forEach((b)=>{
+    if(typeof b === 'string'){
+      cleaning.push(parseFloat(b))
+    }
+    else{
+      cleaning.push(b)
+    }
+  })
+  return cleaning
+}
+
+console.log(clean([12334,'5']))

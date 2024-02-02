@@ -3,7 +3,6 @@ let 나이: number = 18;
 let 출생지역: string = "부산광역시";
 let 생일: string = "0113";
 
-
 let obj: { singer: string; song: string } = { singer: "태연", song: "to X" };
 
 let project: { member: string[]; days: number; started: boolean } = {
@@ -34,18 +33,30 @@ function 입력(x?: string) {
   }
 }
 
-function clean(a : (number|string)[]){
+function clean(a: (number | string)[]) {
   let cleaning: number[] = [];
 
-  a.forEach((b)=>{
-    if(typeof b === 'string'){
-      cleaning.push(parseFloat(b))
+  a.forEach((b) => {
+    if (typeof b === "string") {
+      cleaning.push(parseFloat(b));
+    } else {
+      cleaning.push(b);
     }
-    else{
-      cleaning.push(b)
-    }
-  })
-  return cleaning
+  });
+  return cleaning;
 }
 
-console.log(clean([12334,'5']))
+console.log(clean([12334, "5"]));
+
+function teach(sub : {subject : string | string[]}) {
+  if(typeof sub.subject === 'string'){
+    return sub.subject
+  }else if(Array.isArray(sub.subject)){
+    return sub.subject[sub.subject.length-1]
+  }else{
+    return "없음"
+  }
+}
+
+
+console.log(teach({subject : ['math','science']}))

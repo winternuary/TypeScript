@@ -48,15 +48,24 @@ function clean(a: (number | string)[]) {
 
 console.log(clean([12334, "5"]));
 
-function teach(sub : {subject : string | string[]}) {
-  if(typeof sub.subject === 'string'){
-    return sub.subject
-  }else if(Array.isArray(sub.subject)){
-    return sub.subject[sub.subject.length-1]
-  }else{
-    return "없음"
+function teach(sub: { subject: string | string[] }) {
+  if (typeof sub.subject === "string") {
+    return sub.subject;
+  } else if (Array.isArray(sub.subject)) {
+    return sub.subject[sub.subject.length - 1];
+  } else {
+    return "없음";
   }
 }
 
+console.log(teach({ subject: ["math", "science"] }));
 
-console.log(teach({subject : ['math','science']}))
+type A = { x: number };
+type B = { y: number };
+type AB = A & B;
+let ab: AB = { x: 1, y: 2 };
+
+type Mytype = { color?: string; size: number; readonly position: number[] };
+
+type 개인정보 = { name: string; phone: number; email: string };
+type 미성년자 = { name: string; phone: number; email: string; 미자: boolean };
